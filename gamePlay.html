@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="./gamePlay.css">
+  <title>Slot_Machine by kajendran</title>
+</head>
+
+<body>
+   <div class="modal" id="modalWindow">
+    <div class="statistics">
+      <div class="gamestatus">
+        <div id="gamestatus__win"><h4> No of Win : </h4>
+          <span id="showWin"></span>
+        </div>
+        <div id="gamestatus__loss"><h4> No of Loss : </h4>
+          <span id="showLoss"></span>
+        </div>
+      </div>
+      <div> <h4> Average : </h4>
+        <span id="showAverage"></span>
+      </div>
+    </div>
+  </div>
+  
+    <h1 class="pageTitle">Welcome to Slot Machine</h1>
+  
+  <main class="container">
+       
+    <div class="reel">
+      <img class="reel_img" onclick="stopSpin(1)" id="img1" src="./meterial/bell.png" alt="bell_Symbol">
+      <img class="reel_img reel_img--center" onclick="stopSpin(2)" id="img2" src="./meterial/bell.png" alt="bell_Symbol">
+      <img class="reel_img" id="img3" onclick="stopSpin(3)" src="./meterial/bell.png" alt="bell_Symbol">
+    </div>
+
+    <div class="view">
+      <div><h2>
+         Bet Amount :
+        <span id="showBet">0</span>
+      </h2>
+      </div>
+    </div>
+      <div><h2>
+     Credit :
+        <span id="showBalance">10</span></h2>
+      </div>
+      <br>
+    <div class="btnHolder">
+      <button onclick="addCoin()">Add Coin</button>
+      <button class="control__btn" onclick="betOne()">Bet Once</button>
+      <button class="control__btn" onclick="betMax()">Bet Max</button>
+      <button class="control__btn" onclick="reset()">Reset</button>
+      <button class="control__btn" onclick="spin()">Spin</button>
+      <button onclick="showStats()">Stats</button>
+    </div>
+  </main>
+
+ 
+  <script src="./gamePlay.js "></script>
+</body>
+
+</html>
